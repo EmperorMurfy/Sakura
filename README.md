@@ -17,6 +17,11 @@ Has very basic functions, works with one server at a time at the moment.
 * add multi-server support
 * add java game and import to java script (nim)
 
+## Quick Start 
+I suck at explaining, so here is a quick rundown
+
+1) 
 # Notes:
-If the code is broken, then 
-https://tenor.com/view/kaoruko-moeta-comic-girls-tears-crying-happy-gif-15759503
+me when the code isn't working
+
+![](https://github.com/EmperorMurfy/Sakura/blob/main/sukuna.gif)
