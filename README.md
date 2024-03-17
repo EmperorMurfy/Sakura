@@ -17,4 +17,6 @@ Has very basic functions, works with one server at a time at the moment.
 * add multi-server support
 * add java game and import to java script (nim)
 
-
+# Notes:
+If the code is broken, then 
+https://tenor.com/view/kaoruko-moeta-comic-girls-tears-crying-happy-gif-15759503
