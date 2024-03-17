@@ -17,10 +17,11 @@ Has very basic functions, works with one server at a time at the moment.
 * add multi-server support
 * add java game and import to java script (nim)
 
-## Quick Start 
-I suck at explaining, so here is a quick rundown
+## System Requirements
+* A Computer with Internet Connection 
+* Visual Studio Code
+* Node.js
 
-1) 
 # Notes:
 me when the code isn't working
 
