@@ -15,6 +15,6 @@ Has very basic functions, works with one server at a time at the moment.
 * minigames? JJK themed?
 * add previously coded java games that work in console into chat?
 * add multi-server support
-
+* add java game and import to java script (nim)
 
 
