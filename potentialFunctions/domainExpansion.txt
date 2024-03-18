@@ -1,0 +1,17 @@
+// user can input a command of '/domain_expansion'
+// this will allow users to input either 'roll' which randomly picks a number OR 'Gojo Satoru' OR 'Ryomen Sukuna' and so on - character
+// then the user can select either - 'txt-eng' OR 'txt-jpn' OR 'gif' - Chant 
+// which will send said image or text line
+
+
+// the idea is that 'roll','Gojo Satoru','Ryomen Sukuna' is all assigned a number value, such as 0, 1, 2
+// this calls an arraylist of character objects 
+// this class stores the 'txt-eng' 'txt-jpn' or 'gif'
+// txt-eng, txt-jpn, or gif is selected with Chant, which is also assigned a 0, 1, 2 value
+
+// Example:
+
+// /domain_expansion character: Gojo Satoru chant: gif
+// obtains value 1 + value 2
+// sends value 1 to array (characters[1].get(2)), with value 2 inputted into the object i.e class
+// bot then sends gif
