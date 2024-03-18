@@ -1,4 +1,3 @@
-// translated version of nim(), for sakura's potential functions 
 const readline = require('readline');
 
 function nimGame() {
@@ -58,5 +57,8 @@ function nimGame() {
 
         rl.close();
     }
+
+    playGame();
+}
 
 // call func as playGame()
