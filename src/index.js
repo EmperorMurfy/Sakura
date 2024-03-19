@@ -19,6 +19,7 @@ const client = new Client({
   ]
 })
 
+// profile: custom status
 client.on('ready', (c) => {
   console.log(`✅ ${c.user.tag} is online.`); 
   
