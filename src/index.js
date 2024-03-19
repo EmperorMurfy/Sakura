@@ -29,6 +29,8 @@ client.on('ready', (c) => {
   });
 });
 
+
+// message interaction: @ ping sender test
 client.on("messageCreate", async(message) => {
   if(message.content.toLowerCase().startsWith("test")) {
     // .toLowercase added
@@ -36,9 +38,7 @@ client.on("messageCreate", async(message) => {
   }
 });
 
-// message event tests
-
-
+// message interaction: tests 
 client.on('messageCreate', (message) => { // messageEvent
   if (message.author.bot) { // checks if the message that it's comparing to is itself via ID
   return;
@@ -49,7 +49,7 @@ client.on('messageCreate', (message) => { // messageEvent
  }
 });
 
-// sends embed video
+//  message interactions: embed testers
 client.on('messageCreate', (message) => { 
 
  if (message.content === 'blob') { 
@@ -61,7 +61,7 @@ client.on('messageCreate', (message) => {
  }
 });
 
-// doesn't check for user id
+// message interactions: responds to self
 client.on('messageCreate', (message) => { // messageEvent
 
  if (message.content === 'with this treasure I summon') { // checks message content
@@ -70,9 +70,17 @@ client.on('messageCreate', (message) => { // messageEvent
 });
 
 
+// message interactions: **execute** note: may break code
+client.on("messageCreate", (message) => {    
+  if(message.content === ("**execute**") && message.author.id === '762428111337422870') {
+    message.reply({ content: `${message.author} it will be done m'lord` });
+    var gif = ["https://tenor.com/view/jjk-kasumi-miwa-i'm-about-to-get-political-gif-15963965777564318298", "https://tenor.com/view/yuji-itadori-suku-romen-sukuna-ryomen-sukuna-yuji-changing-to-sukuna-gif-10017632583639619047"];
+    
+  message.reply(gif[Math.floor(Math.random() * 2)]); 
+  }
+}); 
 
-
-
+// slash commands: add, hollow_purple, guh
 client.on('interactionCreate', (interaction) => {
   if (!interaction.isChatInputCommand()) return;
   // console.log(interaction.commandName);
@@ -84,17 +92,30 @@ client.on('interactionCreate', (interaction) => {
     interaction.reply(`the sum is ${num1+num2}`);
   }
 
-  if (interaction.commandName === 'domain_expansion') {
+  if (interaction.commandName === 'hollow_purple') {
     interaction.reply(':rightwards_pushing_hand_tone1: :blue_circle: :red_circle: :leftwards_pushing_hand_tone1: :palm_up_hand_tone1: :dash: :dash: :dash: :purple_circle:');
   }
 
   if (interaction.commandName === 'guh') {
     interaction.reply('https://tenor.com/view/kenjaku-suguru-geto-surprised-cat-jujutsu-kaisen-gif-14583623906303270638');
   }
+});
+
+// slash commands: domain_expansion
+client.on('interactionCreate', (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'domain_expansion') {
+    const character = interaction.options.get('characters').value;
+    const enchain = interaction.options.get('enchain').value;
+
+    var gojoSatoru = ["Domain Expansion: Unlimited Void", "領域展開：無量空処", "https://tenor.com/view/gojo-domain-expansion-gif-19197982"];
+    var ryomenSukuna = ["Domain Expansion: Malevonant Shrine", "領域展開：伏魔御厨子", "https://tenor.com/view/sukuna-ryomen-sukuna-domain-expansion-ry%C5%8Diki-tenkai-malevolent-shrine-gif-25681325"];
+    // add more characters as needed & update register-commands.js acccordingly
+    var characterSelect = [ryomenSukuna[enchain], gojoSatoru[enchain]];
+    
+    interaction.reply(characterSelect[character]);
+  }
 })
-
-
-
-
 
 client.login(process.env.TOKEN); //token
