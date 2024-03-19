@@ -2,6 +2,8 @@
 Written using Java Script. Very basic discord bot to experiment, test, & learn discord bots as a whole. This bot currently is designed to be ran in Visual Studio Code with node.js [Current version using v20.11.1]
 Has very basic functions, works with one server at a time at the moment. 
 
+Note: I'll add a quick setup guide soon
+
 ## Current Functions
 * Slash commands - try /hey 
 * Custom bot status - 'Fying pan asmr' in desc
