@@ -57,7 +57,7 @@ client.on('messageCreate', (message) => {
   message.reply('https://cdn.discordapp.com/attachments/761237935043379222/1213724022559211600/Snaptik.app_7324518673404661035.mp4?ex=6608f894&is=65f68394&hm=754b4cee5788c327587404238c3f65e9af750b44442a4dd2123f2d3bc467817f&'); // replies
  }
 
- else if (message.content === '<@1116082537169698816> > <@1218342329589698620>') {
+ else if (message.content === '<@OTHERBOTIDHERE> > <@SAKURABOTIDHERE>') {
   message.reply('https://tenor.com/view/sukuna-jujutsu-kaisen-sukuna-looking-down-gif-7333648534605432939');
  }
 });
@@ -73,7 +73,7 @@ client.on('messageCreate', (message) => { // messageEvent
 
 // message interactions: **execute** note: may break code
 client.on("messageCreate", (message) => {    
-  if(message.content === ("**execute**") && message.author.id === '762428111337422870') {
+  if(message.content === ("**execute**") && message.author.id === 'USERIDHERE') {
     message.reply({ content: `${message.author} it will be done m'lord` });
     var gif = ["https://tenor.com/view/jjk-kasumi-miwa-i'm-about-to-get-political-gif-15963965777564318298", "https://tenor.com/view/yuji-itadori-suku-romen-sukuna-ryomen-sukuna-yuji-changing-to-sukuna-gif-10017632583639619047"];
     
