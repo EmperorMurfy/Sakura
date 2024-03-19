@@ -72,6 +72,7 @@ client.on('messageCreate', (message) => { // messageEvent
 
 
 
+
 client.on('interactionCreate', (interaction) => {
   if (!interaction.isChatInputCommand()) return;
   // console.log(interaction.commandName);
@@ -91,6 +92,8 @@ client.on('interactionCreate', (interaction) => {
     interaction.reply('https://tenor.com/view/kenjaku-suguru-geto-surprised-cat-jujutsu-kaisen-gif-14583623906303270638');
   }
 })
+
+
 
 
 
