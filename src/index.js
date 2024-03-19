@@ -39,7 +39,7 @@ client.on("messageCreate", async(message) => {
   }
 });
 
-// message interaction: tests 
+// message interaction: botCheck
 client.on('messageCreate', (message) => { // messageEvent
   if (message.author.bot) { // checks if the message that it's comparing to is itself via ID
   return;
