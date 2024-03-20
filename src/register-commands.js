@@ -34,15 +34,90 @@ const commands = [
         type: ApplicationCommandOptionType.Number,
         required: true,
       },
-    ]
+    ],
+  },
+  {
+    name: 'nah_id_win',
+    description: '🗿🤫',
+    options: [
+      {
+        name: 'target-user',
+        description: 'target user',
+        type: ApplicationCommandOptionType.Mentionable,
+        required: true,
+      },
+    ],
   },
   {
     name: 'domain_expansion',
-    description: 'nah, id win',
+    description: 'nah, i alone am the honored one',
+    options: [
+      {
+        name: 'characters',
+        description: 'select the jujutsu kaisen character.',
+        type: ApplicationCommandOptionType.Number,
+        choices: [
+          {
+            name: 'Ryomen_Sukuna',
+            value: 0,
+          },
+          {
+            name: 'Gojo_Satoru',
+            value: 1,
+          },
+          {
+            name: 'Jogo',
+            value: 2,
+          },
+        ],
+        required: true,
+      },
+      { 
+        name: 'enchain',
+        description: 'select the technique.',
+        type: ApplicationCommandOptionType.Number,
+        choices: [
+          {
+            name: 'txt-eng',
+            value: 0,
+          },
+          {
+            name: 'txt-jpn',
+            value: 1,
+          },
+          {
+            name: 'gif',
+            value: 2,
+          },
+        ],
+        required: true,
+      }
+    ]
+
+  },
+  {
+    name: 'hollow_purple',
+    description: 'apple logo be like',
   },
   {
     name: 'guh',
     description: 'truly a guh reaction to a guh moment of all time',
+  },
+  {
+    name: 'stand_proud',
+    description: 'stand proud, you cooked 🔥',
+    // options: [{
+    //  name: 'choice',
+    //  description: 'enter a number 1-5',
+    //  type: ApplicationCommandOptionType.Number,
+    //  choices: [
+    //    {
+     //     name: 'randomizer',
+     //     value: 0,
+     //   },
+     // ],
+     // required: true,
+   // }] // randomizer code - implementation "working"  but same random num? plus not whole num
   },
 ];
 
