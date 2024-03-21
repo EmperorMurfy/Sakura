@@ -1,1 +1,1 @@
-modules.export = () => {};
+modules.export = (clients, interaction) => {};
