@@ -19,6 +19,7 @@ const client = new Client({
   ]
 })
 
+eventHandler(client);
 
 // message interaction: @ ping sender test
 client.on("messageCreate", async(message) => {
