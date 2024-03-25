@@ -77,7 +77,7 @@ const commands = [
         description: 'select the technique.',
         type: ApplicationCommandOptionType.Number,
         choices: [
-          {
+         {
             name: 'txt-eng',
             value: 0,
           },
@@ -86,8 +86,12 @@ const commands = [
             value: 1,
           },
           {
-            name: 'gif',
+            name: 'txt-rmj',
             value: 2,
+          },
+          {
+            name: 'gif',
+            value: 3,
           },
         ],
         required: true,
