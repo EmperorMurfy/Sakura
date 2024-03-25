@@ -126,10 +126,10 @@ client.on('interactionCreate', (interaction) => {
   if (interaction.commandName === 'domain_expansion') {
     const character = interaction.options.get('characters').value;
     const enchain = interaction.options.get('enchain').value;
-
-    var gojoSatoru = ["Domain Expansion: Unlimited Void", "**領域展開：無量空処**", "https://tenor.com/view/gojo-domain-expansion-gif-19197982"];
-    var ryomenSukuna = ["Domain Expansion: Malevonant Shrine", "**領域展開：伏魔御厨子**", "https://tenor.com/view/sukuna-domain-expansion-malevolent-shrine-malevolent-kitchen-gif-8066472834498465617"];
-    var jogo = ["Domain Expansion: Coffin of the Iron Mountain", "**領域展開：蓋棺鉄囲山**", "https://tenor.com/view/domain-expansion-jogo-jjk-jogo-coffin-of-the-iron-mountain-gif-20803081"]
+    
+    var gojoSatoru = ["Domain Expansion: Unlimited Void", "**領域展開：無量空処**", "Ryōiki tenkai: Muryō sora sho", "https://tenor.com/view/gojo-domain-expansion-gif-19197982"];
+    var ryomenSukuna = ["Domain Expansion: Malevonant Shrine", "**領域展開：伏魔御厨子**", "Ryōiki tenkai: Fukuma Mizushi", "https://tenor.com/view/sukuna-domain-expansion-malevolent-shrine-malevolent-kitchen-gif-8066472834498465617"];
+    var jogo = ["Domain Expansion: Coffin of the Iron Mountain", "**領域展開：蓋棺鉄囲山**", "Ryōiki tenkai: Gaikan Tecchisen", "https://tenor.com/view/domain-expansion-jogo-jjk-jogo-coffin-of-the-iron-mountain-gif-20803081"]
     // add more characters as needed & update register-commands.js acccordingly
     var characterSelect = [ryomenSukuna[enchain], gojoSatoru[enchain], jogo[enchain]];
     
