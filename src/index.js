@@ -1,6 +1,6 @@
 // index.js
 // written: mason z
-// march 17, 2024
+// april 7, 2024
 // main discord bot files
 
 // enter 'nodemon' to run in terminal
@@ -161,6 +161,33 @@ client.on('interactionCreate', (interaction) => {
     // console.log(Math.floor(Math.random()*5)); random number between 0 - 5 or 5 values 
     
   }
-})
+});
+
+
+// quadratic formula, will round answers to the nearest thousandth client.on('interactionCreate', (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if(interaction.commandName == 'quadratic_formula') {
+    const a = interaction.options.get('number-a').value;
+    const b = interaction.options.get('number-b').value;
+    const c = interaction.options.get('number-c').value;
+
+    let discriminant = b * b - 4 * a *c;
+    let root1, root2;
+
+    if (discriminant > 0) {
+      root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+      root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+      interaction.reply(`But would you lose? Nah, I'd x =  ${root1} and ${root2}`);
+  } else if (discriminant === 0) {
+      root1 = root2 = -b / (2 * a);
+      interaction.reply(`But would you lose? Nah, I'd x =  ${root1} and ${root2}`);
+  } else {
+      let realPart = (-b / (2 * a)).toFixed(2);
+      let imagPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+      interaction.reply(`But would you lose? Nah, I'd x = ${realPart} + ${imagPart}i and ${realPart} - ${imagPart}i`);
+  }
+  }
+});
 
 client.login(process.env.TOKEN); //token
