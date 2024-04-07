@@ -37,6 +37,42 @@ const commands = [
     ],
   },
   {
+    name: 'quadratic_formula',
+    description: 'you kinda strugglin at math to use this cuh, but sure. cursed technique: a²+bx+c=0!',
+    options: [
+      {
+        name: 'number-a',
+        description: 'number a in quadratic formula',
+        type: ApplicationCommandOptionType.Number,
+        required: true,
+      },
+      {
+        name: 'number-b',
+        description: 'number b in quadratic formula', 
+        type: ApplicationCommandOptionType.Number,
+        required: true,
+      },
+      {
+        name: 'number-c',
+        description: 'number c in quadratic formula',
+        type: ApplicationCommandOptionType.Number,
+        required: true,
+      },
+    ],
+  },
+  {
+    name: 'nah_id_win',
+    description: '🗿🤫',
+    options: [
+      {
+        name: 'target-user',
+        description: 'target user',
+        type: ApplicationCommandOptionType.Mentionable,
+        required: true,
+      },
+    ],
+  },
+  {
     name: 'nah_id_win',
     description: '🗿🤫',
     options: [
