@@ -190,4 +190,70 @@ client.on('interactionCreate', (interaction) => {
   }
 });
 
+
+client.on('interactionCreate', (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if(interaction.commandName == 'chapter_summon') {
+    const num = interaction.options.get('chapter-num').value;
+
+    interaction.reply('**Fandom: ** https://jujutsu-kaisen.fandom.com/wiki/Chapter_' + num + '   **Manga: **https://ww2.jujustukaisen.com/manga/jujutsu-kaisen-chapter-' + num + "/" );
+  }
+});
+
+client.on('interactionCreate', (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName == 'embed_test') {
+    const embed = new EmbedBuilder()
+    .setTitle('Embed Title')
+    .setDescription('this is a test');
+
+    interaction.reply({ embeds: [embed] });
+}
+});
+
+client.on('interactionCreate', (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === 'power_of') {
+    const base = interaction.options.get('base').value;
+    const exponentString = interaction.options.get('exponent').value.toString(); // Ensure exponent is a string
+
+    let exponent;
+    try {
+      exponent = parseInt(exponentString); // Attempt to parse exponent as an integer
+    } catch (error) {
+      // Handle invalid exponent input (e.g., non-numeric characters)
+      interaction.reply('Invalid exponent. Please enter a valid number.');
+      return;
+    }
+
+    let result;
+    if (exponent < 0) {
+      exponent = Math.abs(exponent); // Handle negative exponents
+      result = `${base} to the power of -${exponent} or ${base} ⁻${superscript(exponent)} is 1/(${powerOf(base, exponent)}))`;
+    } else {
+      result = `${base} to the power of ${exponent} or ${base}${superscript(exponent)} is ${powerOf(base, exponent)} `;
+    }
+
+    interaction.reply(result);
+  }
+});
+
+function powerOf(base, exponent) {
+  return Math.pow(base, exponent);
+}
+
+function superscript(n) {
+  // This array stores superscript characters for digits 0-9
+  const superscriptChars = ['⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'];
+  let sb = '';
+  for (const c of n.toString()) {
+    sb += superscriptChars[parseInt(c)];
+  }
+  return sb;
+}
+
+
 client.login(process.env.TOKEN); //token
