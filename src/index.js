@@ -197,7 +197,7 @@ client.on('interactionCreate', (interaction) => {
   if(interaction.commandName == 'chapter_summon') {
     const num = interaction.options.get('chapter-num').value;
 
-    interaction.reply('**Fandom: ** https://jujutsu-kaisen.fandom.com/wiki/Chapter_' + num + '   **Manga: **https://ww2.jujustukaisen.com/manga/jujutsu-kaisen-chapter-' + num + "/" );
+    interaction.reply('**Fandom: ** https://jujutsu-kaisen.fandom.com/wiki/Chapter_' + num + '   **Manga: **[PUT YOUR JJK MANGA LINK HERE, REMOVE CHAPTER NUMBER]' + num + "/" );
   }
 });
 
