@@ -61,6 +61,22 @@ const commands = [
     ],
   },
   {
+    name: 'chapter_summon',
+    description: 'with this treasure I summon, jjk chapter',
+    options: [
+      {
+      name: 'chapter-num',
+      description: 'chapter number',
+      type: ApplicationCommandOptionType.Number,
+      required: true,
+      },
+    ],
+  },
+  {
+    name: 'embed_test',
+    description: 'embed test, please do not use, coding practice',
+  },
+  {
     name: 'nah_id_win',
     description: '🗿🤫',
     options: [
@@ -73,13 +89,19 @@ const commands = [
     ],
   },
   {
-    name: 'nah_id_win',
-    description: '🗿🤫',
+    name: 'power_of',
+    description: 'stand ashamed, you are bad at math',
     options: [
       {
-        name: 'target-user',
-        description: 'target user',
-        type: ApplicationCommandOptionType.Mentionable,
+        name: 'base',
+        description: 'number to the powerOf _',
+        type: ApplicationCommandOptionType.Number,
+        required: true,
+      },
+      {
+        name: 'exponent',
+        description: 'number that is the power',
+        type: ApplicationCommandOptionType.Number,
         required: true,
       },
     ],
@@ -113,7 +135,7 @@ const commands = [
         description: 'select the technique.',
         type: ApplicationCommandOptionType.Number,
         choices: [
-         {
+          {
             name: 'txt-eng',
             value: 0,
           },
